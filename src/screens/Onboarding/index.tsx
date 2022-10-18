@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { View, ScrollView, Dimensions, Text } from "react-native";
 import Carousel from "react-native-snap-carousel";
+import GestureRecognizer from "react-native-swipe-gestures";
 import Button from "src/components/Button";
 import CarouselCard from "src/components/CarouselCard";
 import { onboardingData } from "src/data";
@@ -32,7 +33,10 @@ const Onboarding = ({ navigation }: any) => {
           renderItem={renderCarouselContainer}
           onSnapToItem={(index) => setActiveIndex(index)}
         />
-        <View>
+        <GestureRecognizer
+          onSwipeRight={() => sliderRef.current.snapToPrev()}
+          onSwipeLeft={() => sliderRef.current.snapToNext()}
+        >
           <View style={styles.jumboInfoContainer}>
             <View style={styles.counterPill}>
               <Text style={styles.counterPillText}>
@@ -51,7 +55,7 @@ const Onboarding = ({ navigation }: any) => {
               </Text>
             </View>
           </View>
-        </View>
+        </GestureRecognizer>
         <View style={styles.dotContainer}>
           {onboardingData.map((_, index) => {
             return (
