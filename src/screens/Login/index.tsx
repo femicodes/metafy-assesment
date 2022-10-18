@@ -7,7 +7,7 @@ import SocialIcon from "src/components/SocialIcon";
 import Button from "src/components/Button";
 import styles from "./styles";
 
-const Login = () => {
+const Login = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
       <AvoidingView>
@@ -32,6 +32,7 @@ const Login = () => {
             <Input placeholder='Password' secureTextEntry={true} />
           </View>
           <TouchableOpacity
+            onPress={() => navigation.navigate("ForgotPassword")}
             activeOpacity={0.7}
             hitSlop={{ top: 5, bottom: 5, left: 5, right: 5 }}
             style={styles.forgotPassword}
