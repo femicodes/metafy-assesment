@@ -33,6 +33,24 @@ const styles = StyleSheet.create({
     marginTop: 16,
     marginHorizontal: 20,
   },
+  termsContainer: {
+    marginTop: 20,
+    marginHorizontal: 20,
+  },
+  termsText: {
+    color: Colors.LIGHT_GREY,
+    fontFamily: Typography.fontFamily.SussieRegular,
+    fontSize: 14,
+  },
+  highlightTerms: {
+    color: Colors.WHITE,
+    fontFamily: Typography.fontFamily.SuisseMedium,
+  },
+  buttonContainer: {
+    marginHorizontal: 20,
+    marginTop: 40,
+    marginBottom: 30,
+  },
 });
 
 export default styles;

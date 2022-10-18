@@ -4,6 +4,7 @@ import AvoidingView from "src/components/AvoidingView";
 import Header from "src/components/Header";
 import Input from "src/components/Input";
 import SocialIcon from "src/components/SocialIcon";
+import Button from "src/components/Button";
 import styles from "./styles";
 
 const Signup = () => {
@@ -30,6 +31,16 @@ const Signup = () => {
             <Input placeholder='Full name' />
             <Input placeholder='Email' keyboardType='email-address' />
             <Input placeholder='Password' secureTextEntry={true} />
+          </View>
+          <View style={styles.termsContainer}>
+            <Text style={styles.termsText}>
+              By signing up, you agree with our
+              <Text style={styles.highlightTerms}> Terms of Service</Text> and
+              <Text style={styles.highlightTerms}> Privacy Policy</Text>
+            </Text>
+          </View>
+          <View style={styles.buttonContainer}>
+            <Button title='Continue' />
           </View>
         </ScrollView>
       </AvoidingView>
