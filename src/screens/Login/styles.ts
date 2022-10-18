@@ -33,18 +33,14 @@ const styles = StyleSheet.create({
     marginTop: 16,
     marginHorizontal: 20,
   },
-  termsContainer: {
-    marginTop: 4,
+  forgotPassword: {
     marginHorizontal: 20,
+    alignSelf: "flex-end",
   },
-  termsText: {
-    color: Colors.LIGHT_GREY,
-    fontFamily: Typography.fontFamily.SussieRegular,
-    fontSize: 14,
-  },
-  highlightTerms: {
-    color: Colors.WHITE,
+  forgotPasswordText: {
+    color: Colors.YELLOW,
     fontFamily: Typography.fontFamily.SuisseMedium,
+    fontSize: 14,
   },
   buttonContainer: {
     marginHorizontal: 20,

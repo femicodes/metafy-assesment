@@ -49,7 +49,11 @@ const Onboarding = ({ navigation }: any) => {
             title='Sign up'
           />
           <View style={styles.loginButton}>
-            <Button title='Login' theme='alternate' />
+            <Button
+              onPress={() => navigation.navigate("Login")}
+              title='Login'
+              theme='alternate'
+            />
           </View>
         </View>
       </ScrollView>

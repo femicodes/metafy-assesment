@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import AvoidingView from "src/components/AvoidingView";
 import Header from "src/components/Header";
 import Input from "src/components/Input";
@@ -7,12 +7,12 @@ import SocialIcon from "src/components/SocialIcon";
 import Button from "src/components/Button";
 import styles from "./styles";
 
-const Signup = () => {
+const Login = () => {
   return (
     <View style={styles.container}>
       <AvoidingView>
         <ScrollView bounces={false}>
-          <Header title='Sign up' />
+          <Header title='Login' />
           <View style={styles.socialsContainer}>
             <SocialIcon name='twitch' />
             <SocialIcon name='discord' />
@@ -28,19 +28,18 @@ const Signup = () => {
             <View style={styles.divider} />
           </View>
           <View style={styles.formSection}>
-            <Input placeholder='Full name' />
             <Input placeholder='Email' keyboardType='email-address' />
             <Input placeholder='Password' secureTextEntry={true} />
           </View>
-          <View style={styles.termsContainer}>
-            <Text style={styles.termsText}>
-              By signing up, you agree with our
-              <Text style={styles.highlightTerms}> Terms of Service</Text> and
-              <Text style={styles.highlightTerms}> Privacy Policy</Text>
-            </Text>
-          </View>
+          <TouchableOpacity
+            activeOpacity={0.7}
+            hitSlop={{ top: 5, bottom: 5, left: 5, right: 5 }}
+            style={styles.forgotPassword}
+          >
+            <Text style={styles.forgotPasswordText}>Forgot password?</Text>
+          </TouchableOpacity>
           <View style={styles.buttonContainer}>
-            <Button title='Get started' />
+            <Button title='Login' />
           </View>
         </ScrollView>
       </AvoidingView>
@@ -48,4 +47,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;
