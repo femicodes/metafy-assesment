@@ -1,10 +1,11 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 import {
   createStackNavigator,
   TransitionPresets,
-} from '@react-navigation/stack';
-import Onboarding from 'src/screens/Onboarding';
+} from "@react-navigation/stack";
+import Onboarding from "src/screens/Onboarding";
+import Signup from "src/screens/Signup";
 
 const Stack = createStackNavigator();
 
@@ -12,15 +13,17 @@ const Navigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Onboarding"
+        initialRouteName='Onboarding'
         screenOptions={{
           headerShown: false,
           ...TransitionPresets.SlideFromRightIOS,
-        }}>
-        <Stack.Screen name="Onboarding" component={Onboarding} />
+        }}
+      >
+        <Stack.Screen name='Onboarding' component={Onboarding} />
+        <Stack.Screen name='Signup' component={Signup} />
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};
 
 export default Navigation;

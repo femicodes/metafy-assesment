@@ -6,9 +6,10 @@ import styles from "./styles";
 interface Props {
   title: string;
   theme?: "alternate";
+  onPress?: () => void;
 }
 
-const Button = ({ title, theme }: Props) => {
+const Button = ({ title, theme, onPress }: Props) => {
   const colorMap: any = {
     alternate: {
       backgroundColor: Colors.BLACK_SHADE_2,
@@ -20,11 +21,12 @@ const Button = ({ title, theme }: Props) => {
 
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={[
         styles.container,
         theme && { backgroundColor: selectedColor?.backgroundColor },
       ]}
-      activeOpacity={0.7}
+      activeOpacity={0.8}
     >
       <Text
         style={[styles.titleText, theme && { color: selectedColor?.textColor }]}

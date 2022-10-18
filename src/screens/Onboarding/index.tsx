@@ -6,7 +6,7 @@ import CarouselCard from "src/components/CarouselCard";
 import { onboardingData } from "src/data";
 import styles from "./styles";
 
-const Onboarding = () => {
+const Onboarding = ({ navigation }: any) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const sliderRef = useRef<any>(null);
   const { width } = Dimensions.get("window");
@@ -44,7 +44,10 @@ const Onboarding = () => {
           })}
         </View>
         <View style={styles.buttonContainer}>
-          <Button title='Sign up' />
+          <Button
+            onPress={() => navigation.navigate("Signup")}
+            title='Sign up'
+          />
           <View style={styles.loginButton}>
             <Button title='Login' theme='alternate' />
           </View>
