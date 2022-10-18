@@ -6,6 +6,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.BLACK,
   },
+  socialsContainer: {
+    marginTop: 24,
+    marginHorizontal: 20,
+    flexDirection: "row",
+    alignItems: "center",
+  },
 });
 
 export default styles;

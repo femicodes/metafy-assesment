@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Image, TouchableOpacity, Text } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import styles from "./styles";
 
 interface Props {
@@ -7,6 +8,8 @@ interface Props {
 }
 
 const Header = ({ title }: Props) => {
+  const navigation = useNavigation<any>();
+
   return (
     <View>
       <View style={styles.backgroundContainer}>
@@ -18,6 +21,7 @@ const Header = ({ title }: Props) => {
       </View>
       <View style={styles.headerContainer}>
         <TouchableOpacity
+          onPress={() => navigation.goBack()}
           hitSlop={{ top: 5, right: 5, bottom: 5, left: 5 }}
           activeOpacity={0.7}
         >
