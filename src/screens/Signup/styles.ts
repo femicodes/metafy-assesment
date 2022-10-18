@@ -41,6 +41,8 @@ const styles = StyleSheet.create({
     color: Colors.LIGHT_GREY,
     fontFamily: Typography.fontFamily.SussieRegular,
     fontSize: 14,
+    lineHeight: 21,
+    letterSpacing: 0.5,
   },
   highlightTerms: {
     color: Colors.WHITE,

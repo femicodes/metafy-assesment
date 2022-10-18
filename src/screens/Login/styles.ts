@@ -41,6 +41,8 @@ const styles = StyleSheet.create({
     color: Colors.YELLOW,
     fontFamily: Typography.fontFamily.SuisseMedium,
     fontSize: 14,
+    letterSpacing: 0.5,
+    lineHeight: 19,
   },
   buttonContainer: {
     marginHorizontal: 20,

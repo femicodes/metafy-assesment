@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 import { Colors, Typography } from "src/style";
 
 const styles = StyleSheet.create({
@@ -28,6 +28,44 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     marginTop: 16,
+  },
+  jumboInfoContainer: {
+    marginHorizontal: 20,
+  },
+  counterPill: {
+    backgroundColor: Colors.DARK_GREY,
+    borderRadius: 100,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "flex-start",
+    paddingHorizontal: 11,
+    minHeight: 26,
+  },
+  counterPillText: {
+    color: Colors.WHITE,
+    fontFamily: Typography.fontFamily.SuisseMedium,
+    fontSize: 12,
+    top: Platform.OS === "android" ? 1 : 0,
+  },
+  midPillText: {
+    fontFamily: Typography.fontFamily.SussieRegular,
+  },
+  headingContainer: {
+    marginTop: 20,
+  },
+  headingText: {
+    color: Colors.WHITE,
+    fontFamily: Typography.fontFamily.RoslindaleMedium,
+    fontSize: 32,
+    lineHeight: 39,
+  },
+  subHeadingText: {
+    marginTop: 8,
+    maxWidth: 279,
+    color: Colors.LIGHT_GREY,
+    fontFamily: Typography.fontFamily.SussieRegular,
+    lineHeight: 21,
   },
 });
 

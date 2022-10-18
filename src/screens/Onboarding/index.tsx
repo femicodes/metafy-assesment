@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { View, ScrollView, Dimensions } from "react-native";
+import { View, ScrollView, Dimensions, Text } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import Button from "src/components/Button";
 import CarouselCard from "src/components/CarouselCard";
@@ -19,6 +19,8 @@ const Onboarding = ({ navigation }: any) => {
     );
   };
 
+  const currentOnboardingData = onboardingData[activeIndex];
+
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false} bounces={false}>
@@ -30,6 +32,26 @@ const Onboarding = ({ navigation }: any) => {
           renderItem={renderCarouselContainer}
           onSnapToItem={(index) => setActiveIndex(index)}
         />
+        <View>
+          <View style={styles.jumboInfoContainer}>
+            <View style={styles.counterPill}>
+              <Text style={styles.counterPillText}>
+                {currentOnboardingData.stage}{" "}
+                <Text style={styles.midPillText}>of</Text> 3
+              </Text>
+            </View>
+            <View style={styles.headingContainer}>
+              <Text style={styles.headingText}>
+                {currentOnboardingData.heading}
+              </Text>
+            </View>
+            <View>
+              <Text style={styles.subHeadingText}>
+                {currentOnboardingData.subHeading}
+              </Text>
+            </View>
+          </View>
+        </View>
         <View style={styles.dotContainer}>
           {onboardingData.map((_, index) => {
             return (

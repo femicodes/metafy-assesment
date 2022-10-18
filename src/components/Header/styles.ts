@@ -39,6 +39,8 @@ const styles = StyleSheet.create({
     color: Colors.WHITE,
     fontFamily: Typography.fontFamily.RoslindaleMedium,
     fontSize: 24,
+    lineHeight: 29,
+    letterSpacing: 0.5,
   },
 });
 

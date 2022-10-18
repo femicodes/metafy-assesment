@@ -14,6 +14,8 @@ const styles = StyleSheet.create({
     color: Colors.LIGHT_GREY,
     fontFamily: Typography.fontFamily.SuisseMedium,
     fontSize: 16,
+    lineHeight: 24,
+    letterSpacing: 0.5,
   },
   formContainer: {
     marginTop: 32,

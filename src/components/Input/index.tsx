@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { View, TextInput, TextInputProps } from "react-native";
-import { Colors } from "src/style";
+import { Colors, Typography } from "src/style";
 import styles from "./styles";
 
 const Input = ({ placeholder, ...props }: TextInputProps) => {
+  const inputRef = useRef<any>(null);
   const [isBlur, setIsBlur] = useState(false);
+
+  useEffect(() => {
+    inputRef?.current?.setNativeProps({
+      style: { fontFamily: Typography.fontFamily.SuisseMedium },
+    });
+  }, [props.secureTextEntry]);
 
   return (
     <View style={[styles.inputContainer, isBlur && styles.onBlur]}>
